@@ -1,5 +1,5 @@
 # open this file 
-alias al="$EDITOR .config/zsh/zsh-alias"
+alias al="$EDITOR ~/.config/zsh/zsh-alias"
 
 # Reload the background of screen
 alias reload-back="nitrogen --set-zoom-fill --random /opt/nitrogen 2>/dev/null" 
