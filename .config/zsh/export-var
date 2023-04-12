@@ -1,0 +1,6 @@
+GTK_THEME=Adwaita:dark
+export GTK_THEME
+GTK2_RC_FILES=/usr/share/themes/Adwaita-dark/gtk-2.0/gtkrc
+export GTK2_RC_FILES
+QT_STYLE_OVERRIDE=adwaita-dark
+export QT_STYLE_OVERRIDE
