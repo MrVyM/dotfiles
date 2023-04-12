@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=Nitrogen
+Exec=nitrogen --set-zoom-fill --random /opt/nitrogen
+OnlyShowIn=i3;
+NoDisplay=true
