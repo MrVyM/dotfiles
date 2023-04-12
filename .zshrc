@@ -15,7 +15,7 @@ HISTSIZE=10000
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="bira-custom" 
+ZSH_THEME="bira-krystal" 
 
 plugins=(git history-substring-search)
 
