@@ -4,7 +4,7 @@ export PATH="$PATH:/opt/scripts"
 source ~/.config/zsh/export-var
 
 # Preferred editor for local and remote sessions
-export EDITOR='vim'
+export EDITOR='nvim'
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.config/oh-my-zsh"
