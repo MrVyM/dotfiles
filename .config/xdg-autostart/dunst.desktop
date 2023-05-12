@@ -1,4 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Dunst Server
-Exec=dunst -conf /home/vym/.config/dunst/dunstrc
