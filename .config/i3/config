@@ -59,6 +59,7 @@ bindsym $mod+s exec alacritty -e "pulsemixer"
 # Toggle the split
 bindsym $mod+q split toggle;exec dunstify "Krystal" "Mod+Q : Split was toggle"
 
+bindsym Ctrl+Escape exec ~/.config/i3/lock.sh
 # kill focused window
 bindsym $mod+Shift+q kill
 
