@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=Download on /TMP
+Exec=mkdir /tmp/Downloads -p
+OnlyShowIn=i3;
+NoDisplay=true

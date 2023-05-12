@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=Polybar
+Exec=polybar
+OnlyShowIn=i3;
+NoDisplay=true
