@@ -67,6 +67,9 @@ bindsym $mod+t exec scrot
 # start dmenu (a program launcher)
 bindsym $mod+d exec --no-startup-id ulauncher-toggle 
 
+# Rename a workspace
+bindsym $mod+r exec i3-msg rename workspace to $(zenity --entry --text="New name")
+
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -120,6 +123,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 
+workspace_auto_back_and_forth yes
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "I"
@@ -160,3 +164,4 @@ bindsym $mod+0 workspace $ws10
 
 # ----- WINDOW SPECIFICATION ----
 for_window [title="pulsemixer"] floating enable border pixel 2  
+
