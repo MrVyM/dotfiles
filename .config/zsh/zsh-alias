@@ -21,3 +21,7 @@ alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 # ---- GIT Alias ----
 alias glog="git log --all --oneline --graph" 
+
+# ---- Prog Alias ----
+alias c="cd ~/Prog/C" 
+
