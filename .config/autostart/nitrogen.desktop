@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
 Name=Nitrogen
-Exec=nitrogen --set-zoom-fill --random /home/vym/.config/nitrogen/backgrounds
+Exec=nitrogen --set-zoom-fill --random /home/vym/.config/nitrogen/backgrounds --save
 OnlyShowIn=i3;
 NoDisplay=true
