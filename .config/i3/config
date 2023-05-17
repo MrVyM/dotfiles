@@ -47,6 +47,13 @@ gaps inner 14
 gaps outer -2
 
 # ----- KEYMAP ----
+# Bind Spotify
+bindsym Ctrl+Mod1+space exec (playerctl --player=spotify play-pause &&  notify-send -t 1500 -i "/home/vym/.i3/Icons/SpotifyIcon.png" "Play-Pause") || ((spotify &) &&  notify-send -t 3000 -i "/home/vym/.i3/Icons/SpotifyIcon.png" "Launch") 
+bindsym Ctrl+Mod1+Right exec playerctl --player=spotify next || notify-send "Assistant" "Spotify n'est pas ouvert"
+bindsym Ctrl+Mod1+Left exec playerctl --player=spotify previous || notify-send "Assistant" "Spotify n'est pas ouvert"
+bindsym Ctrl+Mod1+Up exec (pactl set-sink-volume 0 +5% && pactl set-sink-volume 1 +5%) && notify-send -t 2000 $"Volume : $(~/.i3/get-volume.sh)"
+bindsym Ctrl+mod1+Down exec (pactl set-sink-volume 0 -5% && pactl set-sink-volume 1 -5%) && notify-send -t 2000 $"Volume : $(~/.i3/get-volume.sh)"
+
 # start a terminal
 bindsym $mod+Return exec alacritty 
 
@@ -78,9 +85,10 @@ bindsym $mod+r exec i3-msg rename workspace to $(zenity --entry --text="New name
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
+bindsym $mod+j focus down
+bindsym $mod+h focus left 
+bindsym $mod+k focus up 
+bindsym $mod+l focus right 
 bindsym $mod+semicolon focus right
 
 # alternatively, you can use the cursor keys:
@@ -100,12 +108,6 @@ bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
-
-# split in horizontal orientation
-bindsym $mod+h split h
-
-# split in vertical orientation
-bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
