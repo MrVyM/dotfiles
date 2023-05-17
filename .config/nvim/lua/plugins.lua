@@ -1,5 +1,5 @@
 
-return require('packer').startup(function(use)
+require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
     use 'tpope/vim-fugitive'
@@ -8,10 +8,20 @@ return require('packer').startup(function(use)
         'nvim-telescope/telescope.nvim', tag = '0.1.0',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
-    
+
+    use "neovim/nvim-lspconfig"
+    use "hrsh7th/cmp-nvim-lsp" 
+
+    use {
+        "williamboman/mason.nvim"
+    }
+
+    use "williamboman/mason-lspconfig.nvim"
+
     use 'BurntSushi/ripgrep'
 
-    use 'hrsh7th/nvim-compe'
+    use 'hrsh7th/nvim-compe' 
+    use 'hrsh7th/nvim-cmp' 
 
     use 'sharkdp/fd' 
 

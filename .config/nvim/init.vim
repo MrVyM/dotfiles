@@ -1,5 +1,6 @@
 
 lua require('plugins')
+lua require('installer')
 
 source ~/.config/nvim/keymap.vim
 
