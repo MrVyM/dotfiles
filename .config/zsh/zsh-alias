@@ -2,7 +2,7 @@
 alias al="$EDITOR ~/.config/zsh/zsh-alias"
 
 # Reload the background of screen
-alias reload-back="nitrogen --set-zoom-fill --random /home/vym/.config/nitrogen 2>/dev/null" 
+alias reload-back="nitrogen --set-zoom-fill --random /home/vym/.config/nitrogen/backgrounds --save 2>/dev/null" 
 alias reload-poly="pkill polybar && dex /etc/xdg/autostart/polybar.desktop"
 
 # logout
@@ -24,4 +24,5 @@ alias glog="git log --all --oneline --graph"
 
 # ---- Prog Alias ----
 alias c="cd ~/Prog/C" 
-
+alias rst="cd ~/Prog/RUST" 
+alias esp="source ~/.opt/esp/esp-idf/export.sh" 
