@@ -26,3 +26,5 @@ alias glog="git log --all --oneline --graph"
 alias c="cd ~/Prog/C" 
 alias rst="cd ~/Prog/RUST" 
 alias esp="source ~/.opt/esp/esp-idf/export.sh" 
+
+alias st="st-flash write build/Suicide-Quad.bin 0x8000000"  
