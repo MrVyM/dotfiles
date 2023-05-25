@@ -3,7 +3,7 @@ alias al="$EDITOR ~/.config/zsh/zsh-alias"
 
 # Reload the background of screen
 alias reload-back="nitrogen --set-zoom-fill --random /home/vym/.config/nitrogen/backgrounds --save 2>/dev/null" 
-alias reload-poly="pkill polybar && dex /etc/xdg/autostart/polybar.desktop"
+alias reload-poly="pkill polybar && dex $HOME/.config/autostart/polybar.desktop"
 
 # logout
 alias logout="i3-msg exit" 
