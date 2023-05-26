@@ -6,10 +6,9 @@ require('packer').startup(function(use)
     use 'tpope/vim-fugitive'
 
     -- Telescope
-    use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.0',
-        requires = { {'nvim-lua/plenary.nvim'} }
-    }
+    
+    use 'nvim-lua/plenary.nvim' 
+    use 'nvim-telescope/telescope.nvim'
     use 'BurntSushi/ripgrep'
     use 'nvim-treesitter/nvim-treesitter' 
 
@@ -27,13 +26,15 @@ require('packer').startup(function(use)
     -- Colorscheme
     use 'navarasu/onedark.nvim'
     use 'ray-x/aurora'
-
+    
     -- Markdown Viewer
     use({
         "iamcco/markdown-preview.nvim",
         run = function() vim.fn["mkdp#util#install"]() end,
     })
 
-
+    -- Todo Comments
+    use 'folke/todo-comments.nvim' 
+    
 end)
 

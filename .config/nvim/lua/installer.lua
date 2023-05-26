@@ -25,6 +25,8 @@ require("mason-lspconfig").setup {
     ensure_installed = servers,
 }
 
+require('todo-comments').setup()
+
 require('telescope').setup{
   defaults = {
     vimgrep_arguments = {
