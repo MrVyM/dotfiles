@@ -19,6 +19,7 @@ This repo contains the config file of :
 - Lightdm
 - Lightdm-webkit2-greeter
 - Polybar
+- Xclip
 - Udev rules
 
 I also add some little things, like my background and my scripts.
