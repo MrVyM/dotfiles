@@ -4,13 +4,13 @@ source ~/.config/nvim/disable_keymap.vim
 " Control - O : find file with name."
 nnoremap <A-o> <cmd>Telescope find_files<cr>
 nnoremap <A-f> <cmd>Telescope live_grep<cr>
+
+" Keymap for todo
 nnoremap <A-c> :Telescope colorscheme<cr>
-" Control - L : find in file
-" nnoremap <C-l> <cmd>Telescope live_grep<cr>
-" need to remake
+nnoremap ft :TodoTelescope <cr>
+nnoremap tt i// TODO :<ESC> 
 
 noremap ; :
-
 
 " Tab Map
 noremap <A-1> 1gt
