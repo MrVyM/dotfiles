@@ -26,6 +26,7 @@ require('packer').startup(function(use)
     -- Colorscheme
     use 'navarasu/onedark.nvim'
     use 'ray-x/aurora'
+    use 'kristijanhusak/vim-hybrid-material' 
     
     -- Markdown Viewer
     use({
@@ -35,6 +36,9 @@ require('packer').startup(function(use)
 
     -- Todo Comments
     use 'folke/todo-comments.nvim' 
-    
+
+    -- Sugar Unix
+    use 'tpope/vim-eunuch' 
+
 end)
 
