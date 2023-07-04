@@ -1,9 +1,12 @@
 nitrogen --set-zoom-fill --random /home/vym/.config/nitrogen/backgrounds --save
-FILE=$(cat /home/vym/.config/nitrogen/bg-saved.cfg | grep file | cut -d "=" -f2)
-DESTINATION=$(echo $FILE | rev | cut -d "/" -f 3- | rev)
-FILE_DESTINATION="$DESTINATION/lock/"$(basename "$FILE")".png" 
-if [ ! -f "$FILE_DESTINATION" ]
-then
-    convert -blur 0x3 "$FILE" "$FILE_DESTINATION" 
+file=$(cat /home/vym/.config/nitrogen/bg-saved.cfg | grep file | cut -d "=" -f2)
+destination=$(echo $file | rev | cut -d "/" -f 3- | rev)
+file_destination="$destination/lock/"$(basename "$file")".png" 
+if [ ! -f "$file_destination" ]; then
+    if [[ $(file "$file" | grep 1920) ]]; then 
+        convert -blur 0x3 "$file" "$file_destination" 
+    else 
+        convert -blur 0x3 -resize 1920x1080 "$file" "$file_destination" 
+    fi
 fi
-i3lock -i "$FILE_DESTINATION" 
+i3lock -i "$file_destination" 

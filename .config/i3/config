@@ -23,10 +23,10 @@ focus_follows_mouse no
 exec --no-startup-id dex --autostart --environment i3
 
 # Small notification at the start
-exec --no-startup-id sleep 2; exec dunstify -t 5000 "Krystal" "Welcome at home, Sir !" 
+exec --no-startup-id sleep 2; exec --no-startup-id dunstify -t 5000 "Krystal" "Welcome at home, Sir !" 
 
 # Made the downloads directory
-exec rm -rf ~/Downloads/* 
+exec --no-startup-id rm -rf ~/Downloads/* 
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -47,12 +47,16 @@ gaps inner 14
 gaps outer -2
 
 # ----- KEYMAP ----
+
+# Bind keyboard 
+bindsym $mod1+Space exec setxkbmap -query | grep -B 1 intl && setxkbmap us || setxkbmap us -variant intl
 # Bind Spotify
 bindsym Ctrl+Mod1+space exec (playerctl --player=spotify play-pause && dunstify -t 1500 "Krystal" "Spotify Play-Pause") || ((spotify &) && dunstify -t 3000 "Krystal" "Launch") 
 bindsym Ctrl+Mod1+Right exec playerctl --player=spotify next || dunstify "Krystal" "Spotify n'est pas ouvert"
 bindsym Ctrl+Mod1+Left exec playerctl --player=spotify previous || dunstify "Krystal" "Spotify n'est pas ouvert"
 bindsym Ctrl+Mod1+Up exec pactl set-sink-input-volume $(~/.config/i3/get-client.sh) +5% && dunstify -r 2324 -t 2000 "Krystal" "Spotify : $(pacmd list-sink-inputs | grep -B 16 Spotify | grep volume | cut -d "/" -f 2)" 
 bindsym Ctrl+mod1+Down exec pactl set-sink-input-volume $(~/.config/i3/get-client.sh) -5% && dunstify -r 2324 -t 2000 "Krystal" "Spotify : $(pacmd list-sink-inputs | grep -B 16 Spotify | grep volume | cut -d "/" -f 2)" 
+bindsym Ctrl+mod1+m exec pactl set-sink-input-mute $(~/.config/i3/get-client.sh) toggle && dunstify -r 2324 -t 2000 "Krystal" "Spotify Mute" 
 
 # start a terminal
 bindsym $mod+Return exec alacritty 
