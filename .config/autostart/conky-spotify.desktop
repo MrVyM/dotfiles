@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=Application
+Name=Polybar Spotify
+Exec=conky -c /home/vym/.config/conky/spotify.conf
+NoDisplay=true

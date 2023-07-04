@@ -2,5 +2,4 @@
 Type=Application
 Name=Ulauncher Server
 Exec=ulauncher --no-window-shadow --hide-window
-OnlyShowIn=i3;
 NoDisplay=true
