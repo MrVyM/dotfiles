@@ -4,6 +4,14 @@ if [[ $(playerctl status -p spotify) != "Playing" ]]; then
     exit 0
 fi
 
+function updateImage
+{
+    if [ -f spotify-image.png ]; then
+        rm spotify-image.png
+    fi
+    cp "$finalNameFile" spotify-image.png 
+}
+
 imageUrl=$(playerctl metadata -p spotify mpris:artUrl)
 imageName=$(playerctl metadata -p spotify xesam:album)
 imageArtist=$(playerctl metadata -p spotify xesam:albumArtist)
@@ -14,8 +22,10 @@ if [ ! -f "$finalNameFile" ]; then
     curl $imageUrl -o "$nameFile" --silent
     mogrify -format png "$nameFile" 
     rm "$nameFile"   
-    if [ -f spotify-image.png ]; then
-        rm spotify-image.png
-    fi
-    cp "$finalNameFile" spotify-image.png 
+    updateImage
 fi
+
+if [[ $(ls "$finalNameFile" -l | cut -d " " -f 4) != $(ls spotify-image.png | cut -d " " -f 4) ]]; then
+    updateImage
+fi
+            
