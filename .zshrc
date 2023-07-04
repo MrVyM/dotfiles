@@ -54,3 +54,5 @@ export LANG=en_US.UTF-8
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
+# Set the default cursor
+xsetroot -cursor_name left_ptr 2> /dev/null
