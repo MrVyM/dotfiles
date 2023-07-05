@@ -25,7 +25,10 @@ if [ ! -f "$finalNameFile" ]; then
     updateImage
 fi
 
-if [[ $(ls "$finalNameFile" -l | cut -d " " -f 4) != $(ls spotify-image.png | cut -d " " -f 4) ]]; then
+if [ "$(ls "$finalNameFile" -l | cut -d " " -f 5)" -ne "$(ls spotify-image.png | cut -d " " -f 5)" ]; then
     updateImage
+    notify-send -r 12 .$(ls "$finalNameFile" -l | cut -d " " -f 5).
+    notify-send -r 14 .$(ls spotify-image.png -l | cut -d " " -f 5).
+    notify-send -r 23 changement
 fi
             
