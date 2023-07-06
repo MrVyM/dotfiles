@@ -3,10 +3,11 @@ file=$(cat /home/vym/.config/nitrogen/bg-saved.cfg | grep file | cut -d "=" -f2)
 destination=$(echo $file | rev | cut -d "/" -f 3- | rev)
 file_destination="$destination/lock/"$(basename "$file")".png" 
 if [ ! -f "$file_destination" ]; then
-    if [[ $(file "$file" | grep 1920) ]]; then 
+    if [[ $(file "$file" | grep 1920x1280) ]]; then 
         convert -blur 0x3 "$file" "$file_destination" 
+        echo resize
     else 
         convert -blur 0x3 -resize 1920x1080 "$file" "$file_destination" 
     fi
 fi
-i3lock -i "$file_destination" 
+# i3lock -i "$file_destination" 

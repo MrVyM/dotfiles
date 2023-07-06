@@ -24,6 +24,7 @@ exec --no-startup-id dex --autostart --environment i3
 
 # Small notification at the start
 exec --no-startup-id sleep 2; exec --no-startup-id dunstify -t 5000 "Krystal" "Welcome at home, Sir !" 
+exec --no-startup-id ~/.config/i3/disk-usage.sh 
 
 # Made the downloads directory
 exec --no-startup-id rm -rf ~/Downloads/* 
@@ -47,6 +48,9 @@ gaps inner 14
 gaps outer -2
 
 # ----- KEYMAP ----
+
+# Rebind the tab to escape
+exec setxkbmap -option caps:escape
 
 # Bind keyboard 
 bindsym $mod1+Space exec setxkbmap -query | grep -B 1 intl && setxkbmap us || setxkbmap us -variant intl
