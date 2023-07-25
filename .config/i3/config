@@ -11,6 +11,7 @@
 
 set $mod Mod4
 
+include ~/.config/i3/test.conf
 # Font for window titles. Will also be used by the bar unless a different font is used in the bar 
 font pango:monospace 8
 #font pango:DejaVu Sans Mono 8
@@ -54,12 +55,20 @@ exec setxkbmap -option caps:escape
 
 # Bind keyboard 
 bindsym $mod1+Space exec setxkbmap -query | grep -B 1 intl && setxkbmap us || setxkbmap us -variant intl
+
 # Bind Spotify
 bindsym Ctrl+Mod1+space exec (playerctl --player=spotify play-pause && dunstify -t 1500 "Krystal" "Spotify Play-Pause") || ((spotify &) && dunstify -t 3000 "Krystal" "Launch") 
-bindsym Ctrl+Mod1+Right exec playerctl --player=spotify next || dunstify "Krystal" "Spotify n'est pas ouvert"
-bindsym Ctrl+Mod1+Left exec playerctl --player=spotify previous || dunstify "Krystal" "Spotify n'est pas ouvert"
+    # Arrow mode
+bindsym Ctrl+Mod1+Right exec playerctl --player=spotify next || dunstify -t 1500 "Krystal" "Spotify n'est pas ouvert"
+bindsym Ctrl+Mod1+Left exec playerctl --player=spotify previous || dunstify t 1500 "Krystal" "Spotify n'est pas ouvert"
 bindsym Ctrl+Mod1+Up exec pactl set-sink-input-volume $(~/.config/i3/get-client.sh) +5% && dunstify -r 2324 -t 2000 "Krystal" "Spotify : $(pacmd list-sink-inputs | grep -B 16 Spotify | grep volume | cut -d "/" -f 2)" 
 bindsym Ctrl+mod1+Down exec pactl set-sink-input-volume $(~/.config/i3/get-client.sh) -5% && dunstify -r 2324 -t 2000 "Krystal" "Spotify : $(pacmd list-sink-inputs | grep -B 16 Spotify | grep volume | cut -d "/" -f 2)" 
+    # Vim mode 
+bindsym Ctrl+Mod1+h exec playerctl --player=spotify previous || dunstify t 1500 "Krystal" "Spotify n'est pas ouvert"
+bindsym Ctrl+Mod1+l exec playerctl --player=spotify next || dunstify -t 1500 "Krystal" "Spotify n'est pas ouvert"
+bindsym Ctrl+Mod1+k exec pactl set-sink-input-volume $(~/.config/i3/get-client.sh) +5% && dunstify -r 2324 -t 2000 "Krystal" "Spotify : $(pacmd list-sink-inputs | grep -B 16 Spotify | grep volume | cut -d "/" -f 2)" 
+bindsym Ctrl+mod1+j exec pactl set-sink-input-volume $(~/.config/i3/get-client.sh) -5% && dunstify -r 2324 -t 2000 "Krystal" "Spotify : $(pacmd list-sink-inputs | grep -B 16 Spotify | grep volume | cut -d "/" -f 2)" 
+
 bindsym Ctrl+mod1+m exec pactl set-sink-input-mute $(~/.config/i3/get-client.sh) toggle && dunstify -r 2324 -t 2000 "Krystal" "Spotify Mute" 
 
 # start a terminal
