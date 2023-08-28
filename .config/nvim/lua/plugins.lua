@@ -22,6 +22,13 @@ require('packer').startup(function(use)
     use "williamboman/mason-lspconfig.nvim"
     use 'hrsh7th/nvim-compe' 
     use 'hrsh7th/nvim-cmp' 
+    use({
+        "L3MON4D3/LuaSnip",
+        tag = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+        -- install jsregexp (optional!:).
+        run = "make install_jsregexp"
+    })  
+    use 'nvimdev/lspsaga.nvim'
 
     -- Colorscheme
     use 'navarasu/onedark.nvim'
