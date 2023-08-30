@@ -6,7 +6,6 @@ require('packer').startup(function(use)
     use 'tpope/vim-fugitive'
 
     -- Telescope
-    
     use 'nvim-lua/plenary.nvim' 
     use 'nvim-telescope/telescope.nvim'
     use 'BurntSushi/ripgrep'
@@ -14,6 +13,9 @@ require('packer').startup(function(use)
 
     -- Color RGB
     use 'norcalli/nvim-colorizer.lua'
+    
+    -- Icons Fonts
+    use "kyazdani42/nvim-web-devicons"
 
     -- LSPconfig
     use "neovim/nvim-lspconfig"
@@ -24,10 +26,10 @@ require('packer').startup(function(use)
     use 'hrsh7th/nvim-cmp' 
     use({
         "L3MON4D3/LuaSnip",
-        tag = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
-        -- install jsregexp (optional!:).
+        tag = "v2.*", 
         run = "make install_jsregexp"
     })  
+    use "honza/vim-snippets"
     use 'nvimdev/lspsaga.nvim'
 
     -- Colorscheme
