@@ -24,6 +24,7 @@ alias config-i3="$EDITOR ~/.config/i3/config"
 alias config-polybar="$EDITOR ~/.config/polybar/config.ini"
 alias config-dunst="$EDITOR ~/.config/dunst/dunstrc"
 alias config-conky="$EDITOR ~/.config/conky/"
+alias config-nvim="$EDITOR ~/.config/nvim"
 alias cfg='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 # ---- GIT Alias ----
