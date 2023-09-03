@@ -4,6 +4,7 @@ source ~/.config/nvim/disable_keymap.vim
 " Control - O : find file with name."
 nnoremap <A-o> <cmd>Telescope find_files<cr>
 nnoremap <A-f> <cmd>Telescope live_grep<cr>
+noremap <C-f> <cmd>Telescope current_buffer_fuzzy_find<cr>
 
 " Keymap for todo
 nnoremap <A-c> :Telescope colorscheme<cr>
