@@ -4,6 +4,7 @@ require('packer').startup(function(use)
 
     -- Git wrapper
     use 'tpope/vim-fugitive'
+    use 'airblade/vim-gitgutter'
 
     -- Telescope
     use 'nvim-lua/plenary.nvim' 
