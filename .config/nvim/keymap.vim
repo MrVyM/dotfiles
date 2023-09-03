@@ -27,10 +27,9 @@ noremap <A-w> :tabclose<CR>
 noremap <A-h> :tabprevious<CR>
 noremap <A-l> :tabnext<CR>
 
-" Use for the GDB
+noremap gt :Telescope git_status<CR>
+noremap go :Telescope git_commits<CR>
+noremap ga :G add .<CR>
+noremap gc :G commit<CR>
+noremap gp :G push<CR>
 
-" nnoremap <silent> <C-n> :Over<CR>
-" nnoremap <silent> <C-s> :Step<CR>
-" nnoremap <silent> <C-b> :Break<CR>
-" nnoremap <silent> <C-c> :Clear<CR>
-" nnoremap <silent> <A-c> :Continue<CR>
