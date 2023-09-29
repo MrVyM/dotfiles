@@ -1,8 +1,10 @@
 (load-theme 'misterioso)
 (setq column-number-mode t)
 
+(setq backup-directory-alist            '((".*" . "~/.Trash")))
+
 (add-hook 'prog-mode-hook (lambda () (setq display-line-numbers 'relative)))
-(addOB-hook 'conf-mode-hook (lambda () (setq display-line-numbers 'relative)))
+(add-hook 'conf-mode-hook (lambda () (setq display-line-numbers 'relative)))
 (setq-default display-line-numbers-width 2)
 (setq-default display-line-numbers-widen t)
 (tool-bar-mode -1)
