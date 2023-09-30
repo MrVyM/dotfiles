@@ -4,10 +4,6 @@
 
 (setq create-lockfiles nil)
 (setq backup-directory-alist            '((".*" . "~/.Trash")))
-(setq backup-directory-alist
-      `((".*" . temporary-file-directory,))
-      auto-save-file-name-transforms
-      `((".*" ,temporary-file-directory t)))
 
 (add-hook 'prog-mode-hook (lambda () (setq display-line-numbers 'relative)))
 (add-hook 'conf-mode-hook (lambda () (setq display-line-numbers 'relative)))
@@ -27,6 +23,8 @@
 (setq scroll-conservatively 101)
 
 (global-set-key (kbd "C-M-z") 'undo)
+(recentf-mode 1)
+(global-set-key "\C-x\ \C-r" 'recentf-open-files)
 
 (defalias 'yes-or-no-p 'y-or-n-p)
 
