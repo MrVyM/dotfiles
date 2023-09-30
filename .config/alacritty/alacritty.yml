@@ -4,14 +4,23 @@ env:
 window:
   # Spread additional padding evenly around the terminal content.
   padding:
-    x: 10
-    y: 10
+    x: 15 
+    y: 15 
   # Remove buttons
   decorations: none
+
+scrolling:
+  # Enable the scrolling history
+  history: 5000 
 
 cursor:
   # Block Underline or Beam
   style: Block
+
+font: 
+  offset:
+    x: 0
+    y: 1
 
 # Colors (Hyper)
 colors:
@@ -55,3 +64,10 @@ shell:
   program: /usr/bin/zsh
   args:
     - --login
+
+key_bindings:
+  - { key: Return,    mods: Shift,          action: SpawnNewInstance}
+  - { key: PageUp,    mods: None,          action: ScrollPageUp,   mode: ~Alt  }
+  - { key: PageDown,  mods: None,          action: ScrollPageDown, mode: ~Alt  }
+  - { key: U,    mods: Control,          action: ScrollPageUp,   mode: ~Alt  }
+  - { key: D,  mods: Control,          action: ScrollPageDown, mode: ~Alt  }
