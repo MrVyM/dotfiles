@@ -1,11 +1,11 @@
 
 lua require('plugins')
 lua require('installer')
-
+lua vim.loader.enable()
 source ~/.config/nvim/keymap.vim
-
 packadd termdebug
 
+set hidden
 " Add GDB Debugger
 " packadd termdebug
 
@@ -96,16 +96,12 @@ let g:aurora_bold = 1     " bold
 let g:aurora_darker = 1     " darker background
 
 
-" customize your own highlight
-hi Normal guibg=NONE ctermbg=NONE 
-hi String guibg=#339922 ctermbg=NONE 
-
 colo onedark 
 " set highlight Cursor ctermbg=darkmagenta
 
 " Press Tab for completion
 set wildmenu
-set completeopt=menuone,noselect
-set wildmode=list,full
+set completeopt=menu,menuone,noselect
+set wildmode=longest:full,list:full
 set wildignore=*.o,*.obj
 set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
