@@ -1,12 +1,14 @@
 # open this file 
 alias al="$EDITOR ~/.config/zsh/zsh-alias" # test 
 
+alias emacs="emacs -nw"
 # close alias 
 alias :q="exit"
 
 # Reload the background of screen
 alias reload-back="nitrogen --set-zoom-fill --random /home/vym/.config/nitrogen/backgrounds --save 2>/dev/null" 
 alias reload-poly="pkill polybar; dex $HOME/.config/autostart/polybar.desktop"
+alias reload=". ~/.zshrc"
 
 # logout
 alias logout="i3-msg exit" 
@@ -19,6 +21,7 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
 # ---- CONFIG ALIAS ---- 
+alias format='clang-format -i $(find . -type f -name "*.c");clang-format -i $(find . -type f -name "*.h")'
 alias config-zsh="$EDITOR ~/.zshrc"
 alias config-i3="$EDITOR ~/.config/i3/config"
 alias config-polybar="$EDITOR ~/.config/polybar/config.ini"
@@ -36,3 +39,4 @@ alias rst="cd ~/Prog/RUST"
 alias esp="source ~/.opt/esp/esp-idf/export.sh" 
 
 alias st="st-flash write build/Suicide-Quad.bin 0x8000000"  
+alias nvim="nvim -p"
