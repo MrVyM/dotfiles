@@ -1,5 +1,6 @@
 # Add the directory scripts on the path
 export PATH="$PATH:/opt/scripts" 
+export PATH="$PATH:$HOME/.local/share/nvim/mason/bin/" 
 
 source ~/.config/zsh/export-var
 
@@ -19,10 +20,12 @@ ZSH_THEME="bira-krystal"
 
 plugins=(git history-substring-search)
 
+
 source $ZSH/oh-my-zsh.sh
 
 # ----- COMPLETION ---- 
-autoload -U compinit && compinit -d
+ autoload -U compinit && compinit -d
+
 setopt SHARE_HISTORY
 setopt appendhistory
 HISTFILE=~/.config/zsh/zsh-history
@@ -38,10 +41,10 @@ zstyle ':completion:' list-colors "${(s.:.)LS_COLORS}"         # Colored complet
 zstyle ':completion:' accept-exact '(N)' 
 zstyle ':completion:' use-cache on 
 
-
+zstyle ':autocomplete:*' default-context history-incremental-search-backward
 source ~/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-# source ~/.config/zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
+source ~/.config/zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
 # ----- ALIAS ---- 
 source ~/.config/zsh/zsh-alias
 
