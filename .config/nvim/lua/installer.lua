@@ -2,7 +2,10 @@ local installer = { 'cmp-installer',
                     'lspConfig-installer',
                     'lspsaga-installer',
                     'telescope-installer',
-                    'todoComments-installer'}
+                    'todoComments-installer',
+                    'toggleTerm-installer',
+                    'treesitter-installer',
+                    'scroll-installer'}
 
 local function load(plugin)
     dofile(os.getenv('HOME') .. "/.config/nvim/" .. "./lua/" .. plugin .. ".lua")
