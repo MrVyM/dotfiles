@@ -1,0 +1,4 @@
+[Desktop Entry]
+Type=Application
+Name=Home Assistant Companion
+Exec=hacompanion -config /home/vym/.config/hacompanion.toml
