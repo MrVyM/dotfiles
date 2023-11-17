@@ -3,8 +3,11 @@ source ~/.config/nvim/disable_keymap.vim
 
 " Control - O : find file with name."
 nnoremap <A-o> <cmd>Telescope find_files<cr>
+nnoremap <A-d> <cmd>Telescope oldfiles<cr>
 nnoremap <A-f> <cmd>Telescope live_grep<cr>
-noremap <C-f> <cmd>Telescope current_buffer_fuzzy_find<cr>
+
+" Lspsaga 
+nnoremap ? :Lspsaga code_action<CR>
 
 " Keymap for todo
 nnoremap <A-c> :Telescope colorscheme<cr>
@@ -28,9 +31,9 @@ noremap <A-w> :tabclose<CR>
 noremap <A-h> :tabprevious<CR>
 noremap <A-l> :tabnext<CR>
 
-noremap gt :Telescope git_status<CR>
-noremap go :Telescope git_commits<CR>
-noremap ga :G add .<CR>
-noremap gc :G commit<CR>
-noremap gp :G push<CR>
+autocmd TermEnter term://*toggleterm#*
+      \ tnoremap <silent><c-t> <Cmd>exe v:count1 . "ToggleTerm direction=float"<CR>
 
+nnoremap <silent><A-Enter> <Cmd>exe v:count1 . "ToggleTerm direction=float"<CR>
+inoremap <silent><A-Enter> <Esc><Cmd>exe v:count1 . "ToggleTerm direction=float"<CR>
+tnoremap <silent><A-Enter> <Esc><Cmd>exe v:count1 . "ToggleTerm direction=float"<CR>
