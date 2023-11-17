@@ -10,4 +10,4 @@ if [ ! -f "$file_destination" ]; then
         convert -blur 0x3 -resize 1920x1080 "$file" "$file_destination" 
     fi
 fi
-# i3lock -i "$file_destination" 
+i3lock -i "$file_destination" 
