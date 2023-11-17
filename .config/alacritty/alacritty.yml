@@ -66,7 +66,6 @@ shell:
     - --login
 
 key_bindings:
-  - { key: Return,    mods: Shift,          action: SpawnNewInstance}
   - { key: PageUp,    mods: None,          action: ScrollPageUp,   mode: ~Alt  }
   - { key: PageDown,  mods: None,          action: ScrollPageDown, mode: ~Alt  }
   - { key: U,    mods: Control,          action: ScrollPageUp,   mode: ~Alt  }
