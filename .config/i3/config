@@ -87,10 +87,12 @@ bindsym $mod+s exec alacritty -e "pulsemixer"
 bindsym $mod+q split toggle;exec dunstify "Krystal" "Mod+Q : Split was toggle"
 
 bindsym Ctrl+Escape exec ~/.config/i3/lock.sh
+exec --no-startup-id xautolock -time 10 -locker '~/.config/i3/lock.sh' 
 # kill focused window
 bindsym $mod+Shift+q kill
 
-bindsym $mod+t exec scrot
+bindsym Ctrl+Shift+s exec flameshot gui
+bindsym Ctrl+Mod1+s exec flameshot screen
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec --no-startup-id ulauncher-toggle 
